@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Meon Technologies Question 3</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(to top left, #caded8, #f8e9f0);
+        font-family: "Arial", sans-serif;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      #logo {
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="logo" src="https://6hgsf5m3.tinifycdn.com/static/meon/img/logo-new.svg" alt="Meon" />
+    <h1>Meon Technologies Question 3</h1>
+    <h2>Ques 3. Convert n number of object into a array using javascript .</h2>
+    <p>Ans: To convert n number of objects into an array I used spread operators or we can use Array.form method</p>
+    <p>Example:</p>
+    <code>
+      "use strict";<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;const personeOne = { firstName: 'sourav', lastName: "Mudgal" };<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;const personeTwo = { firstName: 'bippan', lastName: "Kumar" };<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;const personeThree = { firstName: 'ketan', lastName: "Trevedi" };<br />
+      function convertPersoneOfObjectsToArray(...personsObj) {<br>
+        return [...personsObj]; <br>
+        we can also use Array.form or spread operaters <br>
+        return Array.from(personsObj);
+      }<br>
+      
+      const perosnes = convertPersoneOfObjectsToArray(personeOne, personeTwo, personeThree);<br>
+      console.log(perosnes);
+    </code>
+    <p>Output [ { "firstName": "sourav", "lastName": "Mudgal" }, { "firstName": "bippan", "lastName": "Kumar" }, { "firstName": "ketan", "lastName": "Trevedi" } ]</p>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

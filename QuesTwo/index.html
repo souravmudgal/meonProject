@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Meon Technologies Question 2</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      background: linear-gradient(to top left, #caded8, #f8e9f0);
+      font-family: 'Arial', sans-serif;
+    }
+
+    h1 {
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    #logo {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+
+    code {
+      background-color: #f5f5f5;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+  </style>
+</head>
+<body>
+  <img id="logo" src="https://6hgsf5m3.tinifycdn.com/static/meon/img/logo-new.svg" alt="Meon" />
+  <h1>Meon Technologies Question 2</h1>
+  <h2>Ques 1. Find specific objects in an array of objects using JavaScript .</h2>
+  <p>Ans: For that, I created an array of objects representing employees and used the <code>filter</code> method to find employees based on a specific condition.</p>
+  <p>Example:</p>
+  <code>
+    const employees = [ <br />
+    &nbsp;&nbsp;{ name: "Sourav", from: "Noida" },<br />
+    &nbsp;&nbsp;{ name: "Mudgal", from: "Delhi" },<br />
+    &nbsp;&nbsp;{ name: "Ketan", from: "Lucknow" }, <br />
+    &nbsp;&nbsp;{ name: "Shukla", from: "Lucknow" }, <br />
+    &nbsp;&nbsp;{ name: "Bippan",from: "Noida" }, <br />
+    ];<br />
+    function findEmployeeFrom() { return employees.filter((employee) => employee.from === 'Noida'); }<br />
+    const result = findEmployeeFrom(); console.log(result);
+  </code>
+  <p>Output: [ { "name": "Sourav", "from": "Noida" }, { "name": "Bippan", "from": "Noida" } ]</p>
+
+  <script src="./js/script.js"></script>
+
+</body>
+</html>

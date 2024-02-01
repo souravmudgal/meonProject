@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Meon Technologies Question 7 and 8 </title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background: linear-gradient(to top left, #caded8, #f8e9f0);
+        font-family: "Arial", sans-serif;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      #logo {
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      .json {
+        background-color: #f8f9fa;
+        padding: 2px 6px;
+        border-radius: 4px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        height: 500px;
+        width: 80vw;
+        margin: 0;
+        gap: 8px;
+      }
+
+      @media (max-width: 768px) {
+        .json {
+          grid-template-columns: 1fr ;
+          justify-content: space-around;
+        }
+      }
+
+      .exampleCode {
+        background-color: black;
+        padding: 6px 8px;
+        border-radius: 4px;
+        color: white;
+        line-height: 2
+      }
+
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="logo" src="https://6hgsf5m3.tinifycdn.com/static/meon/img/logo-new.svg" alt="Meon" />
+    <h1>Meon Technologies Question 7 and 8</h1>
+    <h2>Ques 7.Explain the difference between JSON.stringify() and JSON.parse() using example.</h2>
+    <h2>Ques 7.Write the example to parse any JSON string in javascript?</h2>
+    <p>Ans: JSON.stringify() and JSON.parse() are javascript method which we used for JSON data</p>
+    <div class="json">
+      <div class="stringify">
+        <p style="text-align: center; font-weight: bold">Stringify</p>
+        <p style="font-size: small">The JSON.stringify() method converts a JavaScript object or value to a JSON string.</p>
+        <div class="exampleCode">
+          const employee = {<br />
+          firstName: 'Sourav',<br />
+          state: 'Noida',<br />
+          title:'React Developer'<br />
+          };<br />
+
+          const employeeString = JSON.stringify(employee);<br />
+          console.log(employeeString);<br />
+          Output: {"firstName":"Sourav","state":"Noida","title":"React Developer"}
+        </div>
+      </div>
+
+      <div class="parse">
+        <p style="text-align: center; font-weight: bold">Parse</p>
+        <p style="font-size: small">The JSON.parse() method parses a JSON string and converts it into a JavaScript object or value.</p>
+        <div class="exampleCode">
+          const employeeString = '{"firstName":"Sourav","state":Noida,"title":"React Developer"}';<br>
+          const employee = JSON.parse(employeeString);<br>
+          console.log(employee);<br>
+          Output: { firstName: 'Sourav', state: 'Noida', title: 'React Developer' }<br>
+        
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

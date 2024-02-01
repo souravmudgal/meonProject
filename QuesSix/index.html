@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Meon Technologies Question 6</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        background: linear-gradient(to top left, #caded8, #f8e9f0);
+        font-family: "Arial", sans-serif;
+      }
+
+      h1 {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+        text-align: center;
+      }
+
+      #logo {
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+      #content-type {
+        max-width: 500px;
+        height: auto;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 10px;
+      }
+
+      code {
+        background-color: #f5f5f5;
+        padding: 2px 6px;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <img id="logo" src="https://6hgsf5m3.tinifycdn.com/static/meon/img/logo-new.svg" alt="Meon" />
+    <h1>Meon Technologies Question 6</h1>
+    <h2>What is the correct Json content type?</h2>
+    <p>
+      Ans: In the below code i am calling and api and now i am setting a content type to text/css in XMLHttpRequest by using,<br>
+      xhr.setRequestHeader('Content-Type', 'application/json'); but content-type i got from the api is Content-Type', 'application/json'<br>
+     so it simple gives an error 
+    </p>
+    <p>Example:</p>
+    <code>
+      "use strict";<br />
+      var xhr = new XMLHttpRequest();<br />
+      xhr.open('GET', `https://restcountries.com/v3.1/name/india?fullText=true`, true);<br />
+      xhr.timeout = 100000;<br />
+      xhr.setRequestHeader('Content-Type', 'text/css');<br>
+
+      xhr.onload = function () {<br>
+        if (xhr.status >= 200 && xhr.status < 300) {<br>
+          var contentType = xhr.getResponseHeader('Content-Type');<br>
+          if (contentType && contentType.indexOf('text/css') !== -1) {<br>
+            console.error('Unexpected Content-Type. Expected text/css, but received application/json.');<br>
+          }<br>
+          console.log('Ajax request successful:', xhr.responseText);<br>
+        } else {<br>
+          console.error('Ajax request failed:', xhr.statusText);<br>
+        }<br>
+      };<br>
+
+      // Handle timeout event <br />
+      xhr.ontimeout = function () <br />
+      { console.error('Ajax request timed out'); };<br />
+      // Handle other errors<br />
+      xhr.onerror = function () { console.error('Ajax request failed'); };<br />
+      xhr.send();
+    </code>
+
+    <img id="content-type" src="./images/content-type.png" alt="Meon" />
+
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
